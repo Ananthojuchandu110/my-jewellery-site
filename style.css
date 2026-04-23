@@ -1,52 +1,13 @@
-/* GLOBAL SETTINGS */
-:root { 
-    --gold: #D4AF37; 
-    --maroon: #800000; 
-    --white: #ffffff; 
-    --black: #1a1a1a; 
-    --cream: #fdfbf7;
+.abbreviation {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    color: var(--gold);
+    margin-top: -5px;
 }
 
-body { margin: 0; font-family: 'Lexend', sans-serif; background-color: var(--white); color: var(--black); }
-h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-
-/* NAVIGATION (Common for all pages) */
-nav { 
-    padding: 20px 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    background: white; 
-    border-bottom: 1px solid #eee; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
+.nav-logo-container:hover .logo-text {
+    color: var(--maroon);
+    transition: 0.3s;
 }
-.logo-text { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 1.2rem; margin: 0; text-decoration: none; font-weight: bold; }
-.nav-links { list-style: none; display: flex; gap: 25px; margin: 0; }
-.nav-links a { text-decoration: none; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 400; }
-.nav-links a:hover { color: var(--gold); }
-
-/* HERO SECTIONS */
-.hero { 
-    padding: 100px 20px; 
-    text-align: center; 
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1500&q=80'); 
-    background-size: cover; 
-    background-position: center;
-}
-.hero h2 { font-size: 3rem; color: var(--maroon); margin-bottom: 10px; }
-.hero p { font-style: italic; color: var(--gold); font-size: 1.2rem; }
-
-/* GRID & CARDS */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-.card { background: white; padding: 20px; border: 1px solid #eee; text-align: center; transition: 0.3s; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.card img { width: 100%; height: 300px; object-fit: cover; background: #f4f4f4; margin-bottom: 15px; }
-
-/* BUTTONS */
-.btn { display: inline-block; padding: 12px 25px; background: var(--maroon); color: white; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
-.btn:hover { background: var(--gold); }
-
-/* FOOTER */
-footer { padding: 50px 20px; background: var(--black); color: white; text-align: center; font-size: 0.8rem; line-height: 1.6; }
