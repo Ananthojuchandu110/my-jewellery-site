@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Surya Chandra Jewels | Fine Indian Artistry Since 1928</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lexend:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #D4AF37; --maroon: #800000; --white: #ffffff; --black: #1a1a1a; }
+        body { margin: 0; font-family: 'Lexend', sans-serif; background-color: var(--white); color: var(--black); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        nav { padding: 20px; text-align: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: white; z-index: 100; }
+        .logo-text { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 1.5rem; margin: 0; }
+
+        /* Hero Section */
+        .hero { padding: 100px 20px; text-align: center; background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1500&q=80'); background-size: cover; }
+        .hero h2 { font-size: 3rem; color: var(--maroon); margin-bottom: 10px; }
+        .hero p { font-style: italic; color: var(--gold); font-size: 1.2rem; }
+
+        /* About Section */
+        .about { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; line-height: 1.8; }
+        .about h3 { color: var(--gold); font-size: 2rem; }
+
+        /* Collection Grid */
+        .collection { padding: 60px 20px; background: #f9f9f9; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; }
+        .card { background: white; padding: 20px; border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 250px; object-fit: cover; background: #eee; }
+        .card h4 { margin: 15px 0 5px; color: var(--maroon); }
+        .card p { font-size: 0.9rem; color: #666; }
+        .price { font-weight: bold; color: var(--gold); display: block; margin: 10px 0; }
+
+        /* WhatsApp Button */
+        .btn { display: inline-block; padding: 12px 25px; background: var(--maroon); color: white; text-decoration: none; border-radius: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .btn:hover { background: var(--black); }
+
+        footer { padding: 40px; background: var(--black); color: white; text-align: center; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo-text">Sri Surya Chandra Jewels</div>
+</nav>
+
+<section class="hero">
+    <h2>Celestial Harmony in Gold</h2>
+    <p>Reflecting your brilliance since 1928</p>
+</section>
+
+<section class="about">
+    <h3>Our Legacy</h3>
+    <p>Where the radiance of the Sun meets the serenity of the Moon. Established nearly a century ago, we craft heirlooms that blend the regal heritage of Indian temple art with clean, modern silhouettes. Every piece is 100% BIS Hallmarked.</p>
+</section>
+
+<section class="collection">
+    <h3>The Signature Collection</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=500&q=80" alt="Necklace">
+            <h4>Lakshmi Temple Necklace</h4>
+            <p>Antique 22K Gold | 35g Approx.</p>
+            <span class="price">Est. ₹2,10,000*</span>
+            <a href="https://wa.me/YOURNUMBER" class="btn">Enquire on WhatsApp</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=80" alt="Bangles">
+            <h4>Sun-Moon Gold Bangles</h4>
+            <p>Solid 22K Gold | 42g Approx.</p>
+            <span class="price">Est. ₹2,60,000*</span>
+            <a href="https://wa.me/YOURNUMBER" class="btn">Enquire on WhatsApp</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1598560912005-59a0d5c9035a?auto=format&fit=crop&w=500&q=80" alt="Earrings">
+            <h4>Crescent Jhumkas</h4>
+            <p>Temple Work | 15g Approx.</p>
+            <span class="price">Est. ₹95,000*</span>
+            <a href="https://wa.me/YOURNUMBER" class="btn">Enquire on WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sri Surya Chandra Jewels. All Rights Reserved.<br>
+    Final price based on live market rates and making charges. 100% BIS Hallmarked.</p>
+</footer>
+
+</body>
+</html>
