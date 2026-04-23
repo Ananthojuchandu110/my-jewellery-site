@@ -1,56 +1,150 @@
-/* GLOBAL THEME SETTINGS */
-:root { 
-    --gold: #D4AF37; 
-    --maroon: #800000; 
-    --white: #ffffff; 
-    --black: #1a1a1a; 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lexend:wght@200;400&display=swap');
+
+:root {
+    --gold: linear-gradient(135deg, #D4AF37 0%, #F2D382 50%, #D4AF37 100%);
+    --gold-solid: #D4AF37;
+    --maroon: #600000;
+    --dark: #0a0a0a;
+    --white: #ffffff;
     --cream: #fdfbf7;
 }
 
-body { margin: 0; font-family: 'Lexend', sans-serif; background-color: var(--white); color: var(--black); line-height: 1.6; }
-h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Lexend', sans-serif; background-color: var(--white); color: var(--dark); overflow-x: hidden; }
 
-/* LUXURY NAVIGATION (Consistent on all pages) */
-nav { 
-    padding: 20px 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    background: white; 
-    border-bottom: 1px solid #eee; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
+/* LUXURY NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
 }
-.logo-container { text-align: left; }
-.logo-abbv { color: var(--maroon); font-family: 'Playfair Display', serif; font-size: 1.8rem; letter-spacing: 4px; font-weight: 700; margin: 0; }
-.logo-full { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; margin-top: -5px; }
 
-.nav-links { list-style: none; display: flex; gap: 30px; margin: 0; }
-.nav-links a { text-decoration: none; color: var(--black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-.nav-links a:hover, .nav-links a.active { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 5px; }
+.logo-abbv {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    background: var(--gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
 
-/* HERO SECTIONS (Recreates the original parallax vibe) */
-.hero { 
-    padding: 100px 20px; 
-    text-align: center; 
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1500&q=80'); 
-    background-size: cover; 
+.nav-links { display: flex; list-style: none; gap: 40px; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    font-weight: 400;
+}
+.nav-links a:hover { color: var(--gold-solid); }
+
+/* CINEMATIC HERO SECTION */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
 }
-.hero h2 { font-size: 3.5rem; color: var(--maroon); margin: 10px 0; }
-.hero p { font-style: italic; color: var(--gold); font-size: 1.2rem; }
 
-/* GRID & CARDS (For Collections and Featured items) */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-.card { background: white; padding: 20px; border: 1px solid #eee; text-align: center; transition: 0.3s; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.card img { width: 100%; height: 300px; object-fit: cover; background: #f4f4f4; margin-bottom: 15px; }
+.hero h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+    animation: fadeInUp 1.2s ease;
+}
 
-/* BUTTONS (Mirrors the original aesthetic) */
-.btn { display: inline-block; padding: 12px 25px; background: var(--maroon); color: white !important; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; border: none; cursor: pointer; }
-.btn:hover { background: var(--gold); }
+.hero p {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
 
-/* FOOTER (Consistent, full-width) */
-footer { padding: 50px 20px; background: var(--black); color: white; text-align: center; font-size: 0.8rem; }
+/* PREMIUM CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: -50px auto 80px; /* Overlaps with section slightly */
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 15px;
+    border: 1px solid #eee;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border-color: var(--gold-solid);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--maroon);
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--maroon);
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: 0.4s;
+    border: 1px solid var(--maroon);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--maroon);
+    border: 1px solid var(--maroon);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    padding: 80px 5%;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
